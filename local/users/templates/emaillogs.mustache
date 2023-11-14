@@ -1,0 +1,25 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{#str}}username, local_users{{/str}}</th>
+                <th scope="col">{{#str}}email, local_users{{/str}}</th>
+                <th scope="col">{{#str}}deliverytime, local_users{{/str}}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#data}}
+            <tr>
+                <td>{{ username }}</td>
+                <td>{{ email }}</td>
+                <td>{{ deliveredtime }}</td>
+            </tr>
+        {{/ data}}
+        {{^data}}
+            <tr>
+                {{#str}}nodataavailable, local_users{{/str}}
+            </tr>
+        {{/data}}
+        </tbody>
+    </table>
+</div>
